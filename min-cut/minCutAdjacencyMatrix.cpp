@@ -4,6 +4,11 @@
 #include <climits>
 #include <cmath>
 
+
+/*
+        Graph is represented by adj matrix
+
+*/
 using namespace std;
 
 mt19937 gen(random_device{}());
