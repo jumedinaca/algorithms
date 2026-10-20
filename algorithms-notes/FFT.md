@@ -82,3 +82,23 @@ $$
 ### Halving Lemma
 if n > 0 is even, then the squares of the n complex n roots of unity are the n/2 roots of unity, where each appear exactly twice.
 
+### Summation Lemma
+
+For any non-zero integer k  not divisible by n  , and any integer n >= 1
+
+$$
+\sum_{j = 0}^{n-1} (w_n^k)^{j} = 0
+$$
+### Discrete Fourier Transform
+Evaluate
+
+$$
+A(x) = \sum_{i = 0}^{n -1} a_i x^{i}\ \  \text{on roots of unity  } w_n^k , k=0,1,...,n-1
+$$
+
+$$
+Y_k = A(w_n^{k}) \\
+Y = (Y_0, Y_1, ... Y_{n-1}) \\
+Y = DFT_n(A)
+$$
+
