@@ -102,3 +102,55 @@ Y = (Y_0, Y_1, ... Y_{n-1}) \\
 Y = DFT_n(A)
 $$
 
+
+```text
+
+resursive_fft(A):
+	n = A.lenght # must be power of 2
+	
+	if n == 1 return A[0]
+	
+	w_n = e^{2*pi*i/n}
+	w = 1
+	
+	A0 = [A[0],A[2],...,A[n-2]] 
+	A1 = [A[1],A[3],...,A[n-1]]
+	
+	Y0 = recursive_fft(A0)
+	Y1 = recursive_fft(A1)
+	
+	Y = []*n
+	
+	for k=0 to n/2 - 1:
+		Y[k] = Y0[k] + w*Y1[k]
+		Y[k+n/2] = Y0[k] - w*Y1[k]
+		w = w*w_n
+	
+	return Y
+```
+
+```text
+
+inverse_fft(Y):
+	n = Y.lenght # must be power of 2
+	
+	if n == 1 return Y[0]
+	
+	w_n = e^{2*pi*i/n}
+	w = 1
+	
+	Y0 = [Y[0],Y[2],...,Y[n-2]] 
+	Y1 = [Y[1],Y[3],...,Y[n-1]]
+	
+	A0 = inverse_fft(A0)
+	A1 = inverse_fft(A1)
+	
+	A = []*n
+	
+	for k=0 to n/2 - 1:
+		Y[k] = Y0[k] + w*Y1[k]
+		Y[k+n/2] = Y0[k] - w*Y1[k]
+		w = w*w_n
+	
+	return Y
+```

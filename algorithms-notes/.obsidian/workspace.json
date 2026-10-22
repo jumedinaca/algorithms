@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FFT.md",
+                "file": "D&C/FFT.md",
                 "mode": "source",
                 "source": false
               },
@@ -220,7 +220,7 @@
   "active": "450750f02cdc8133",
   "lastOpenFiles": [
     "D&C/Inversions.md",
-    "FFT.md",
+    "D&C/FFT.md",
     "Algorithms.md",
     "D&C/Closest Pair.md",
     "Closest Pair.pdf",
